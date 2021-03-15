@@ -1,7 +1,7 @@
-// Esercizio 1
-// Crea un array di 10 oggetti che rappresentano una
-// zucchina, indicando per ognuna varietà, peso e lunghezza.
-// Calcola quanto pesano tutte le zucchine
+// // Esercizio 1
+// // Crea un array di 10 oggetti che rappresentano una
+// // zucchina, indicando per ognuna varietà, peso e lunghezza.
+// // Calcola quanto pesano tutte le zucchine
 // var zucchine = [
 //     zucchina1 = {
 //         "varietà": "nera di milano",
@@ -60,7 +60,7 @@
 // }
 // console.log(sommaPeso);
 
-// esercizio 2
+// // esercizio 2
 // var zucchine = [
 //     zucchina1 = {
 //         "varietà": "nera di milano",
@@ -115,7 +115,7 @@
 // ]
 // console.log(zucchine);
 
-// // CREO GLI ARREY DOVE ANDRO A DIVIDERE LE ZUCCHINE CORTE DA QUELLE LUNGHE
+// // // CREO GLI ARREY DOVE ANDRO A DIVIDERE LE ZUCCHINE CORTE DA QUELLE LUNGHE
 // var zucchineCorte = [];
 // var zucchineLunghe = [];
 // for (var i = 0; i < zucchine.length; i++) {
@@ -128,7 +128,7 @@
 // console.log(zucchineCorte);
 // console.log(zucchineLunghe);
 
-// // CREO LE VARIABILI DOVE ADRO A SOMMARE I PESI TOTALI DELLE ZUCCHINE CORTE E DI QUELLE LUNGHE
+// // // CREO LE VARIABILI DOVE ADRO A SOMMARE I PESI TOTALI DELLE ZUCCHINE CORTE E DI QUELLE LUNGHE
 // var sommaZucCorte = 0;
 // var sommaZucLunghe = 0;
 // for (var i=0; i < zucchineCorte.length; i ++) {
@@ -141,19 +141,143 @@
 // console.log("il peso totale delle zucchine lunghe è: " + sommaZucLunghe);
 
 
-// esercizio 3
-do {
-    var parola = prompt("inserisci una parola")
-} while (!isNaN(parola))
-console.log(parola);
+// // esercizio 3
+// do {
+//     var parola = prompt("inserisci una parola")
+// } while (!isNaN(parola))
+// console.log(parola);
 
-parolaGirata = giraParola(parola);
-console.log(parolaGirata);
+// parolaGirata = giraParola(parola);
+// console.log(parolaGirata);
 
-function giraParola (parola) {
-    parolaGirata = "";
-    for (var i = parola.length - 1; i >= 0; i--) {
-        parolaGirata += parola[i];
-    }
-    return parolaGirata;
-}
+// function giraParola (parola) {
+//     parolaGirata = "";
+//     for (var i = parola.length - 1; i >= 0; i--) {
+//         parolaGirata += parola[i];
+//     }
+//     return parolaGirata;
+// }
+
+
+// esercizio 4
+// Generatore di “nomi cognomi” casuali: prendendo una lista
+// di nomi e una lista di cognomi, Gatsby vuole generare una
+// falsa lista di 3 invitati.
+// var listaInvitati = [];
+// var listaNomi = [];
+// var listaCognomi = [];
+// for (var i = 0; i < 5; i++) {
+//     do {
+//         var nome = prompt("inserire nome");
+//     } while (!isNaN(nome));
+//     listaNomi.push(nome);
+
+//     do {
+//         var cognome = prompt("inserici cognome");
+//     } while (!isNaN(cognome));
+//     listaCognomi.push(cognome);
+// }
+// console.log(listaNomi);
+// console.log(listaCognomi);
+
+
+// while (listaInvitati.length < 3) {
+//     var indiceCasualeNomi = Random(0, 4);
+//     var indiceCasualeCognomi = Random(0, 4);
+//     listaInvitati.push(listaNomi[indiceCasualeNomi] + " " + listaCognomi[indiceCasualeCognomi]);
+// }
+// console.log(listaInvitati);
+
+
+// // funzioni
+// function Random(min,max) {
+//     return Math.floor(Math.random() * (max - min + 1) +min);
+// }
+
+
+// esercizio 5
+// Crea un array di numeri interi e fai la somma di tutti gli
+// elementi che sono in posizione dispari
+// var listaNum = [];
+// var sommaDispari = 0;
+
+// for (var i = 0; i < 10; i++) {
+//     do {
+//         var num = parseInt(prompt("inserisci 10 numeri"));
+//     } while (isNaN(num));
+//     listaNum.push(num);
+// }
+// console.log(listaNum);
+
+// for (var i = 0; i < listaNum.length; i++) {
+//     if (paridispari(i) == "dispari") {
+//         sommaDispari += listaNum[i];
+//     }
+// }
+// console.log(sommaDispari);
+
+// // funzioni
+// function paridispari(num) {
+//     if (num % 2 == 0) {
+//         return "pari";
+//     } else {
+//         return "dispari";
+//     }
+// }
+
+
+// esercizio 6
+// Crea due array che hanno un numero di elementi diversi.
+// Aggiungi elementi casuali all’array che ha meno elementi,
+// fino a quando ne avrà tanti quanti l’altro.
+// var arreyGrande = [];
+// var arreyPiccolo = [];
+
+// for (var i = 0; i < 10; i++) {
+//     do {
+//         var num = parseInt(prompt("inserisci 10 numeri"));
+//     } while (isNaN(num));
+//     arreyGrande.push(num);
+// }
+// console.log(arreyGrande);
+
+// for (var i = 0; i < 4; i++) {
+//     do {
+//         var num = parseInt(prompt("inserisci 4 numeri"));
+//     } while (isNaN(num));
+//     arreyPiccolo.push(num);
+// }
+// console.log(arreyPiccolo);
+
+// while (arreyPiccolo.length < arreyGrande.length) {
+//     do {
+//         var num = parseInt(prompt("inserisci altri numeri"));
+//     } while (isNaN(num));
+//     arreyPiccolo.push(num);
+// }
+// console.log(arreyGrande.length);
+// console.log(arreyPiccolo.length);
+
+
+// esercizio 7
+// Scrivi una funzione che fonda due array (aventi lo stesso
+// numero di elementi) prendendo alternativamente gli
+// elementi da uno e dall’altro
+// es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+// var arrey1 = ["a", "b", "c"];
+// var arrey2 = [1, 2, 3];
+// console.log(arrey1);
+// console.log(arrey2);
+
+// var arreyFuso = fusion(arrey1, arrey2)
+// console.log(arreyFuso);
+
+// // funzioni
+// function fusion(arrey1, arrey2) {
+//     var arreyFuso = [];
+//     for (var i = 0; i < arrey1.length; i++) {
+//         arreyFuso.push(arrey1[i]);
+//         arreyFuso.push(arrey2[i]);
+//     }
+//     return arreyFuso;
+// }
